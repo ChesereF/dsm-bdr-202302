@@ -26,3 +26,8 @@ CREATE TABLE tbl_livros (
 	codigo_titulo varchar (20),
 	status text 
 );
+
+CREATE DOMAIN chk_status text CHECK (VALUE='disponivel' OR VALUE='indisponivel')
+
+CREATE DOMAIN categoria  text
+CHECK (VALUE IN ('DRAMA', 'COOMEDIA'));
